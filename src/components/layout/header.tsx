@@ -1,12 +1,13 @@
 import { CommandIcon } from "lucide-react";
+
 import Logo from "../common/logo";
-import { BlurFade } from "../magicui/blur-fade";
 import { Button } from "../ui/button";
-import { NavLinks } from "../ui/nav-links";
+import { NavLinks } from "../ui/navigation-links";
+import { BlurFade } from "../magicui/blur-fade";
 
 export const Header = () => {
   return (
-    <header>
+    <header className="h-full w-full">
       <BlurFade>
         <nav className="px-6 md:px-25 py-6 flex items-center justify-between">
           <Logo />

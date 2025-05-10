@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+
 import "./../styles/globals.css";
+import { Header } from "@/components/layout/header";
 
 const outfit = Outfit({
   variable: "--font-outfit-sans",
@@ -20,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html className="dark" lang="en" suppressHydrationWarning>
-      <body className={`${outfit.variable} } antialiased`}>{children}</body>
+      <body className={`${outfit.variable} } antialiased`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

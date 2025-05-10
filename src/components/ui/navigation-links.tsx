@@ -8,16 +8,17 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { links } from "@/const";
+import { links, moreNav } from "@/const";
 import { Button } from "./button";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { MoreNav } from "./more-navigation";
 
 export const NavLinks = () => {
   const pathname = usePathname();
 
   return (
-    <NavigationMenu className="bg-primary/5 backdrop-blur-sm px-2 py-0.5 rounded-full border font-sans">
+    <NavigationMenu className="h-full w-full bg-primary/5 backdrop-blur-sm px-2 py-0.5 rounded-full border font-sans">
       <NavigationMenuList>
         {links.map((link) => {
           const isActive =
@@ -59,7 +60,17 @@ export const NavLinks = () => {
             more
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <NavigationMenuLink>Link</NavigationMenuLink>
+            <ul className="grid grid-cols-3 w-[800px] gap-4 p-4">
+              {moreNav.map((nav) => (
+                <MoreNav
+                  key={nav.href}
+                  name={nav.name}
+                  href={nav.href}
+                  description={nav.description}
+                  image={nav.image}
+                />
+              ))}
+            </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
