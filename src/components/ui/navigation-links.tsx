@@ -1,5 +1,7 @@
 "use client";
 
+import { cn } from "@/lib/utils";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,9 +12,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import { links, moreNav } from "@/const";
 import { Button } from "./button";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
 import { MoreNav } from "./more-navigation";
+import { usePathname } from "next/navigation";
 
 export const NavLinks = () => {
   const pathname = usePathname();
