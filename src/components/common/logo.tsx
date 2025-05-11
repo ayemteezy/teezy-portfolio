@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import logo from "../../../public/images/logo.svg";
 import ScrollLink from "@/components/common/scroll-link";
+import { div } from "framer-motion/client";
 
 export default function Logo() {
   const [isClient, setIsClient] = useState(false);
@@ -13,7 +14,9 @@ export default function Logo() {
     setIsClient(true);
   }, []);
 
-  if (!isClient) return;
+  if (!isClient) {
+    return <div className="size-6" />;
+  }
 
   return (
     <ScrollLink id="">

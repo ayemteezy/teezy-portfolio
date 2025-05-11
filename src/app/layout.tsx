@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="dark" lang="en" suppressHydrationWarning>
-      <body className={`${outfit.variable} } antialiased`}>
+      <body className={`${outfit.variable} antialiased`}>
         <Header />
         {children}
       </body>
