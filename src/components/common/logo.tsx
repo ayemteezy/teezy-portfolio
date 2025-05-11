@@ -19,8 +19,8 @@ export default function Logo() {
   }
 
   return (
-    <ScrollLink id="">
-      <Image src={logo} alt="Teezy Logo" className=" size-6" />
+    <ScrollLink id="" className="p-2">
+      <Image src={logo} alt="Teezy Logo" className="size-5 md:size-6" />
     </ScrollLink>
   );
 }

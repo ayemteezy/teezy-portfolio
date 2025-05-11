@@ -19,7 +19,7 @@ export const NavLinks = () => {
   const pathname = usePathname();
 
   return (
-    <NavigationMenu className="h-full w-full bg-primary/5 backdrop-blur-sm px-2 py-0.5 rounded-full border font-sans">
+    <NavigationMenu className="h-full w-full bg-primary/5 backdrop-blur-sm px-2 py-0.5 rounded-full border font-sans hidden md:block">
       <NavigationMenuList>
         {links.map((link) => {
           const isActive =
@@ -61,7 +61,7 @@ export const NavLinks = () => {
             more
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid grid-cols-3 w-[800px] gap-4 p-4">
+            <ul className="grid lg:grid-cols-3 md:grid-cols-1 lg:w-[800px] w-[400px] gap-4 p-4">
               {moreNav.map((nav) => (
                 <MoreNav
                   key={nav.href}

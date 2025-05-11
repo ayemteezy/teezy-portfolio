@@ -10,7 +10,7 @@ interface Props {
 
 export const MoreNav = ({ name, href, description, image }: Props) => {
   return (
-    <li className="relative rounded-md h-60 w-full overflow-hidden cursor-pointer group">
+    <li className="relative rounded-md lg:h-60 h-25 w-full overflow-hidden cursor-pointer group">
       <Link href={href}>
         <Image
           src={image}
