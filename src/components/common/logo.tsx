@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
 import logo from "../../../public/images/logo.svg";
 import ScrollLink from "@/components/common/scroll-link";
-import { div } from "framer-motion/client";
 
 export default function Logo() {
   const [isClient, setIsClient] = useState(false);
@@ -14,13 +12,15 @@ export default function Logo() {
     setIsClient(true);
   }, []);
 
-  if (!isClient) {
-    return <div className="size-6" />;
-  }
-
   return (
-    <ScrollLink id="" className="p-2">
-      <Image src={logo} alt="Teezy Logo" className="size-5 md:size-6" />
-    </ScrollLink>
+    <div className="w-[40px] p-2 flex items-center justify-center">
+      {isClient ? (
+        <ScrollLink id="/" className="animate-fade-slide-left">
+          <Image src={logo} alt="Teezy Logo" className="size-5 md:size-6" />
+        </ScrollLink>
+      ) : (
+        <div className="size-5 md:size-6" />
+      )}
+    </div>
   );
 }

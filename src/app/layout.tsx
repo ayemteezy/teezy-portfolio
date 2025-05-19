@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Outfit, Playfair_Display } from "next/font/google";
 
-import "./../styles/globals.css";
+import "./globals.css";
 import { Header } from "@/components/layout/header";
+import Socials from "@/components/common/socials";
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair-serif",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 const outfit = Outfit({
   variable: "--font-outfit-sans",
@@ -22,9 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html className="dark" lang="en" suppressHydrationWarning>
-      <body className={`${outfit.variable} antialiased`}>
+      <body
+        className={`${outfit.variable} ${playfair.variable}  antialiased relative h-full`}
+      >
         <Header />
         {children}
+        {/* <Socials /> */}
       </body>
     </html>
   );
