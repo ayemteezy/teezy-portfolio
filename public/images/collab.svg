@@ -1,0 +1,40 @@
+<svg width="220" height="100" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    circle {
+      fill: none;
+      stroke: #666666;
+    }
+    .inner {
+      stroke-width: 4;
+    }
+    .outer {
+      stroke-width: 1;
+    }
+  </style>
+
+  <!-- Group 1 -->
+  <g>
+    <circle class="outer" cx="25" cy="50" r="17"/>
+    <circle class="inner" cx="25" cy="50" r="22"/>
+  </g>
+
+  <!-- Group 2 -->
+  <g>
+    <circle class="outer" cx="70" cy="50" r="17"/>
+    <circle class="inner" cx="70" cy="50" r="22"/>
+  </g>
+
+  <!-- Group 3 -->
+  <g>
+    <circle class="outer" cx="115" cy="50" r="17"/>
+    <circle class="inner" cx="115" cy="50" r="22"/>
+  </g>
+
+  <!-- Group 4 -->
+  <g>
+    <circle class="outer" cx="160" cy="50" r="17"/>
+    <circle class="inner" cx="160" cy="50" r="22"/>
+  </g>
+
+</svg>
