@@ -29,7 +29,8 @@ export default function Socials() {
       >
         <div className="vertical-line dark:vertical-link-dark my-4 flex flex-col items-center gap-4">
           <Link
-            href="/"
+            href="mailto:laurencelestercarino@gmail.com"
+            aria-label="Email me"
             className="text-muted-foreground text-sm tracking-widest transition-colors ease-in [writing-mode:vertical-rl] hover:text-foreground"
           >
             laurencelestercarino@gmail.com
