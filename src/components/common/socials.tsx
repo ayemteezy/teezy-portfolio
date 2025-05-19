@@ -16,7 +16,7 @@ export default function Socials() {
             </Link>
           </li>
           <li>
-            <Link href="/" target="_blank">
+            <Link href="https://linkedin.com/in/username" target="_blank">
               <LinkedInLogoIcon className="h-6 w-6 text-muted-foreground transition-colors ease-in hover:text-foreground" />
             </Link>
           </li>
